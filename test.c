@@ -14,9 +14,9 @@
 //int main()
 //{
 //	if (CHAR_MIN)
-//		printf("ÓÐ·ûºÅ");
+//		printf("æœ‰ç¬¦å·");
 //	else
-//		printf("ÎÞ·ûºÅ");
+//		printf("æ— ç¬¦å·");
 //	return 0;
 //}
 
@@ -25,7 +25,7 @@
 	{
 		int bits = 0;
 		while (x) {
-			if (x & lU)
+			if (x & 1U)
 				bits++;
 			x >>= 1;
 		}
@@ -34,21 +34,21 @@
 	
 	int int_bits(void)
 	{
-		return count_bits(-OU);
+		return count_bits(-0U);
 	}
 	
 	void print_bits(wnsigned x)
 	{
 		int i;
-		for (i = int_bits() - 1 i >= 0; i--)
+		for (i = int_bits() - 1; i >= 0; i--)
 			putchar(((x >> i) & 1U) ? '1'; '0');
 	}
 	int main()
 {
 	int a, b;
-	puts("ÇëÊäÈëÁ½¸öÕûÊý¡£");
-	printf("µÚÒ»¸ö£º"); scanf("%d", &a);
-	printf("µÚ¶þ¸ö£º"); scanf("%d", &b);
+	puts("è¯·è¾“å…¥ä¸¤ä¸ªæ•´æ•°ã€‚");
+	printf("ç¬¬ä¸€ä¸ªï¼š"); scanf("%d", &a);
+	printf("ç¬¬äºŒä¸ªï¼š"); scanf("%d", &b);
 	while (a >= 0 && b >= 0)
 	{
 		printf(" "); print_bits("a<<b");
